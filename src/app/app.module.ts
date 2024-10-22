@@ -7,7 +7,7 @@ import { SalesPersoneListComponent } from './sales-persone-list/sales-persone-li
 @NgModule({
   declarations: [
     AppComponent,
-    SalesPersoneListComponent
+     SalesPersoneListComponent
   ],
   imports: [
     BrowserModule
