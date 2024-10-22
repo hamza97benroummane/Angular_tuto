@@ -9,6 +9,7 @@
   <th>Last Name</th>
   <th>Email</th>
   <th>SalesValume</th>
+  <th>Met quota?</th>
 </tr>
 </thead>
 
@@ -18,7 +19,12 @@
     <td>{{temp.firstName}}</td>
     <td>{{temp.lastName}}</td>
     <td>{{temp.email}}</td>
-    <td>{{temp.selesVolume}}</td>
+    <td>{{temp.selesVolume | currency: 'USD'}}</td>
+    <td>
+      <div *ngIf="temp.selesVolume >=5000; else myElseBlock">Yes</div>
+      <ng-template #myElseBlock>No</ng-template>
+
+    </td>
   </tr>
 
   </tbody>
